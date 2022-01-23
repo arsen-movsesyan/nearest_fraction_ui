@@ -7,4 +7,4 @@ export const environment = {
 };
 
 export const serverHost = 'http://127.0.0.1';
-export const serverPort = 5000;
+export const serverPort = ":5000";
