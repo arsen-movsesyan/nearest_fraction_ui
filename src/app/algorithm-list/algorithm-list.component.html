@@ -1,0 +1,5 @@
+<div class="row mt-3">
+  <div class="col-12">
+    <app-algorithm *ngFor="let algo of algorithms" [algo]="algo" (algorithmSelected)="onAlgorithmSelected(algo)"></app-algorithm>
+  </div>
+</div>

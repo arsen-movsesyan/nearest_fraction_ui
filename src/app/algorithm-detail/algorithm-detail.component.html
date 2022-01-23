@@ -1,0 +1,36 @@
+<div class="row mt-4">
+  <div class="col">
+    <h4 class="d-flex justify-content-center">{{algorithm.name}}</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p>{{algorithm.description}}</p>
+    <p>See source code <a [href]="algorithm.github_url" target="_blank">HERE</a></p>
+  </div>
+</div>
+<hr>
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="row">
+    <div class="col-4">
+      <label class="col-form-label" for="decimalFraction">Decimal Fraction</label>
+      <input type="text" id="decimalFraction" name="decimalFraction" class="form-control" ngModel required>
+    </div>
+    <div class="col-2">
+      <label class="col-form-label" for="precision">Precision</label>
+      <select class="form-control" name="precision" [(ngModel)]="algorithm.default_precision" id="precision">
+        <option *ngFor="let prec of algorithm.precision_choice" [ngValue]="prec">{{prec}}</option>
+      </select>
+<!--      <input type="number" min="2" id="precision" name="precision" class="form-control" [ngModel]="algorithm.default_precision">-->
+    </div>
+    <div class="col-2">
+      <label class="col-form-label" for="submit">&nbsp;</label>
+      <button type="submit" id="submit" class="btn btn-primary btn-block" [disabled]="f.invalid">Convert</button>
+    </div>
+    <div class="col-4" *ngIf="result">
+      <label for="result" class="col-form-label">Result</label>
+      <input class="form-control" id="result" name="result"  [ngModel]="result.fraction" disabled>
+    </div>
+
+  </div>
+</form>
