@@ -11,6 +11,7 @@ import {AlgorithmService} from "./algorithm.service";
 import {HttpClientModule} from "@angular/common/http";
 import { AlgorithmDetailComponent } from './algorithm-detail/algorithm-detail.component';
 import {FormsModule} from "@angular/forms";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {FormsModule} from "@angular/forms";
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [AlgorithmService],
   bootstrap: [AppComponent]

@@ -20,7 +20,6 @@ export class AlgorithmDetailComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.submitForm.value);
     const value = this.submitForm.value;
     this.algorithmService.getResult(value.decimalFraction, value.precision, this.algorithm.api_endpoint)
       .subscribe((result) => {
