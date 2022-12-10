@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --aot && cp googledcaafe4590f66bdc.html dist/fnf_ui",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "copy": "cp googledcaafe4590f66bdc.html dist/fnf_ui"
   },
   "private": true,
   "dependencies": {

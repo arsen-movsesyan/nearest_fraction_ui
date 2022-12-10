@@ -1,32 +1,32 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <div class="container-fluid">
-      <div class="navbar-header">
-        <div class="navbar-brand">
-          <fa-icon [icon]="codeIcon"></fa-icon>
-        </div>
-      </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-<!--    <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-<!--      <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
-<!--        <li class="nav-item">-->
-<!--          <a class="nav-link">Home</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--          <a class="nav-link">Home</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--          <a class="nav-link">Home</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--          <a class="nav-link">Home</a>-->
-<!--        </li>-->
-<!--      </ul>-->
-
-<!--    </div>-->
-
+  <div class="navbar-header">
+    <div class="navbar-brand">
+      <fa-icon [icon]="codeIcon"></fa-icon>
+    </div>
   </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/nearest-fraction">Nearest Fraction</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/question-poll">Question Poll</a>
+      </li>
+    </ul>
+
+    <div class="navbar-nav ml-auto">
+      <a class="nav-link" routerLink="/question-poll">Sign In</a>
+    </div>
+  </div>
+
+
 </nav>

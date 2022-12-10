@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body" *ngIf="questions.length === 0">
+    <p>No Question for this topic as of now</p>
+  </div>
+
+  <ul class="list-group" *ngIf="questions.length > 0">
+
+    <li class="list-group-item" *ngFor="let question of questions">
+      {{ question | json }}
+    </li>
+
+  </ul>
+
+</div>

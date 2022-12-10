@@ -1,5 +1,5 @@
 import {HttpClient} from "@angular/common/http";
-import {ALGORITHMS_URL, backendServer} from "./constants";
+import {ALGORITHMS_URL, backendServer} from "../constants";
 import {AlgorithmModel} from "./algorithm.model";
 import {Injectable} from "@angular/core";
 import {ResultModel} from "./result.model";
