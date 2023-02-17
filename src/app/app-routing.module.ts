@@ -8,10 +8,6 @@ const routes: Routes = [
     loadChildren: () => import('./fraction-converter/fraction-converter.module')
       .then((mod) => mod.FractionConverterModule)
   },
-  {path: 'question-poll',
-    loadChildren: () => import('./question-poll/question-poll.module')
-      .then((mod) => mod.QuestionPollModule)
-  },
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
