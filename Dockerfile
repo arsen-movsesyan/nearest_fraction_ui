@@ -11,6 +11,7 @@ RUN npm run build
 FROM nginx:latest
 
 COPY --from=node /app/dist/fnf_ui /usr/share/nginx/html
+COPY ./nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
 
