@@ -1,19 +1,11 @@
-<div class="container">
   <div class="row">
-    <div class="col-md-4" *ngIf="algorithms">
-      <app-algorithm-list [algorithms]="algorithms" (algorithmSelected)="algorithmSelected($event)"></app-algorithm-list>
+    <div class="col-md-3 mt-3">
+      <app-converters></app-converters>
     </div>
 
-    <div class="col-md-8">
-      <div class="col">
+    <div class="col-md-9">
 
-        <p>This application designed to convert decimal fraction to nearest binary fraction with a given precision.</p>
-        <p>Binary fraction is a fraction with a denominator which is a power of two.</p>
-        <p>The number 33.67 is converted into 33 21/32.
-        <p>Here the precision is 5 which denotes to power of two in the denominator or 32.</p>
+      <router-outlet></router-outlet>
 
-      </div>
-      <app-algorithm-detail [algorithm]="selectedAlgorithm" *ngIf="selectedAlgorithm"></app-algorithm-detail>
     </div>
   </div>
-</div>

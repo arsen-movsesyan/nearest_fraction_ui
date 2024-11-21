@@ -1,0 +1,5 @@
+<ul class="list-group d-flex justify-content-center">
+  <li class="list-group-item" style="cursor: pointer" [ngClass]="activeConvertor === 1 ? 'active' : ''" (click)="selectConvertor(1)">To Binary 0.5 <fa-icon [icon]="faAngleDoubleRight"></fa-icon> 1/2</li>
+  <li class="list-group-item" style="cursor: pointer" [ngClass]="activeConvertor === 2 ? 'active' : ''" (click)="selectConvertor(2)">To Decimal 1/2 <fa-icon [icon]="faAngleDoubleRight"></fa-icon> 0.5</li>
+</ul>
+

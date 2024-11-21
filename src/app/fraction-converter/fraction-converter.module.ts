@@ -7,18 +7,32 @@ import {CommonModule} from "@angular/common";
 import {AlgorithmService} from "./algorithm.service";
 import {FormsModule} from "@angular/forms";
 import {ConverterRoutingModule} from "./converter-routing.module";
+import { ConvertersComponent } from './converters/converters.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import { ToBinaryComponent } from './to-binary/to-binary.component';
+import { ToDecimalComponent } from './to-decimal/to-decimal.component';
+import { ResultComponent } from './result/result.component';
+import { FractionDisplayComponent } from './result/fraction-display/fraction-display.component';
+import { DecimalDisplayComponent } from './result/decimal-display/decimal-display.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    ConverterRoutingModule
+    ConverterRoutingModule,
+    FontAwesomeModule
   ],
   declarations: [
     FractionConverterComponent,
     AlgorithmDetailComponent,
     AlgorithmListComponent,
-    AlgorithmComponent
+    AlgorithmComponent,
+    ConvertersComponent,
+    ToBinaryComponent,
+    ToDecimalComponent,
+    ResultComponent,
+    FractionDisplayComponent,
+    DecimalDisplayComponent
   ],
   providers: [
     AlgorithmService

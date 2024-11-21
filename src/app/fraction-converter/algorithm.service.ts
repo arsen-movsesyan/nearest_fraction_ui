@@ -9,11 +9,17 @@ export class AlgorithmService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getAlgorithms() {
-    return this.httpClient.get<AlgorithmModel[]>(ALGORITHMS_URL);
+  getPrecisions() {
+    const ret = [];
+    for (let i = 2; i < 11; i++) {
+      ret.push({
+        value: i, precision: Math.pow(2, i)
+      });
+    }
+    return ret;
   }
 
-  getResult(fraction: number, precision: number, url: string) {
-    return this.httpClient.post<ResultModel>(backendServer + '/' + url, {decimal_fraction: fraction, precision})
+  getResult(fraction: number, precision: number) {
+    return this.httpClient.post<ResultModel>(`${backendServer}/to-binary`, {decimal_fraction: fraction, precision});
   }
 }

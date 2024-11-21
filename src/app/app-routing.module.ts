@@ -4,7 +4,7 @@ import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'nearest-fraction',
+  {path: 'fraction-converter',
     loadChildren: () => import('./fraction-converter/fraction-converter.module')
       .then((mod) => mod.FractionConverterModule)
   },
