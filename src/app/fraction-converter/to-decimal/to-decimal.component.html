@@ -4,6 +4,39 @@
   </div>
 
   <div class="card-body">
+    <p>Convert any fraction to decimal equivalent</p>
+
+    <div class="form-row">
+
+      <div class="form-group col-md-3">
+        <label for="wholeId">&nbsp;</label>
+        <input type="number" step="any" class="form-control w-50" id="wholeId" [(ngModel)]="whole">
+      </div>
+
+      <div class="form-group col-md-3">
+        <input type="number" step="1" class="form-control w-50" [(ngModel)]="numerator" min="1"> &nbsp;
+        <input type="number" step="1" class="form-control w-50" [(ngModel)]="denominator" min="1">
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="precisionId">Precision</label>
+        <select class="form-control w-50" id="precisionId" [(ngModel)]="precision">
+          <option *ngFor="let pr of precisions" [value]="pr">{{pr}}</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <button type="button" class="btn btn-success" (click)="convert()" [disabled]="convertDisabled">Convert</button>
+      <button type="button" class="btn btn-primary" (click)="reset()" *ngIf="!!result">Reset</button>
+    </div>
+
 
   </div>
+</div>
+
+
+<div class="mt-3" *ngIf="result">
+  <app-result [result]="result" [convertor]="2"></app-result>
 </div>

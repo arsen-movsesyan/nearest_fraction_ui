@@ -21,7 +21,7 @@ export class AlgorithmDetailComponent implements OnInit {
 
   onSubmit() {
     const value = this.submitForm.value;
-    this.algorithmService.getResult(value.decimalFraction, value.precision)
+    this.algorithmService.getResultForToBinary(value.decimalFraction, value.precision)
       .subscribe((result) => {
         this.result = result;
       })

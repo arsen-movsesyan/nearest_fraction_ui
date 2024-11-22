@@ -31,7 +31,7 @@ export class ToBinaryComponent implements OnInit {
   }
 
   convert() {
-    this.algorithmService.getResult(this.fraction, this.precision)
+    this.algorithmService.getResultForToBinary(this.fraction, this.precision)
       .subscribe((result: ResultModel) => {
         this.result = result;
       });
