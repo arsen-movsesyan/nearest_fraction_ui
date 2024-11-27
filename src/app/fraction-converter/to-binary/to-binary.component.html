@@ -10,12 +10,12 @@
 
       <div class="form-group col-md-8">
         <label for="decimalFractionId">Fraction</label>
-        <input type="number" step="any" class="form-control w-50" id="decimalFractionId" [(ngModel)]="fraction">
+        <input type="number" placeholder="1.234" step="any" class="form-control w-50" id="decimalFractionId" [(ngModel)]="fraction">
       </div>
 
       <div class="form-group col-md-4">
         <label for="precisionId">Precision</label>
-        <select class="form-control w-50" id="precisionId" [(ngModel)]="precision">
+        <select class="form-control w-50" id="precisionId" [(ngModel)]="precision" (change)="convert()">
           <option *ngFor="let pr of precisions" [value]="pr.value">1 / {{pr.precision}}</option>
         </select>
       </div>

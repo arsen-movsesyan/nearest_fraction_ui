@@ -8,9 +8,9 @@ import {ResultModel} from "../result.model";
   styleUrls: ['./to-binary.component.css']
 })
 export class ToBinaryComponent implements OnInit {
-  fraction: number;
+  fraction: number | null;
   precision: number;
-  result: ResultModel;
+  result: ResultModel | null;
   precisions: {value: number, precision: number}[];
 
   constructor(
@@ -31,15 +31,17 @@ export class ToBinaryComponent implements OnInit {
   }
 
   convert() {
-    this.algorithmService.getResultForToBinary(this.fraction, this.precision)
-      .subscribe((result: ResultModel) => {
-        this.result = result;
-      });
-    // this.reset();
+    if (!!this.fraction) {
+      this.algorithmService.getResultForToBinary(this.fraction, this.precision)
+        .subscribe((result: ResultModel) => {
+          this.result = result;
+        });
+    }
   }
 
   reset() {
-    this.fraction = 0;
+    this.fraction = null;
     this.precision = 5;
+    this.result = null;
   }
 }
